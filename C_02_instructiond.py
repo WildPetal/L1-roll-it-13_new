@@ -18,11 +18,27 @@ def yes_no(question):
             print("please say yes / no")
 
 
+def instructions():
+    """prints instructions"""
+
+    print("""
+*** Instructions ***  
+      
+roll the dice and try to win!     
+    """)
+
 # Main routine
 
-# testing loop
-while True:
-    want_instructions = yes_no("Do you want to see the instructions")
-    print(f"you chose {want_instructions}")
 
-print("we done")
+want_instructions = yes_no("Do you want to see the instructions")
+print(f"you chose {want_instructions}")
+
+# display the instructions if the user wants to see them...
+if want_instructions == "yes":
+    instructions()
+
+print(
+print("program continues")
+)
+
+
