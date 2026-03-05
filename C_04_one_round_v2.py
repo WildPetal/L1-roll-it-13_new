@@ -18,6 +18,12 @@ def initial_points(which_player):
 
     return total, double
 
+def make_statement(statement, decoration):
+    """Adds emoji / additional characters to the start and end of headings"""
+
+    ends = decoration * 3
+    print(f"{ends} {statement} {ends}")
+
 # main starts here...
 
 # Roll the dice for the user and note if they got a double
@@ -99,7 +105,7 @@ while player_1_points < 13 and player_2_points < 13:
         user_points = user_points * 2
 
     # Output round results
-    print("\nRound results")
+    make_statement( "round results", "=")
     print(f"User Points: {user_points} | Computer Points: {comp_points}")
     print(round_feedback)
     print()
